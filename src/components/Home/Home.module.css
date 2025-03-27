@@ -1,0 +1,276 @@
+.homeContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    min-width: 700px;
+    height: 100vh;
+}
+
+.homeArea {
+    margin-top: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.controllers {
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    justify-content: left;
+    align-content: left;
+}
+
+section {
+    height: auto;
+} 
+
+.playOnline {
+    display: block;
+    width: 500px;
+    margin: 20px;
+}
+
+.playComputer {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 500px;
+}
+
+.loginBtn, .registerBtn, .logoutBtn, .playMultiButton {
+    margin-top: 50px;
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.loginBtn {
+    background-color: #177005;
+}
+
+.registerBtn {
+    background-color: #153e96;
+}
+
+.loginBtn:hover {
+    background-color: #0f3607;
+}
+
+.registerBtn:hover {
+    background-color: #071c4b;
+}
+
+.playMultiButton {
+    background-color: #1a4212;
+}
+
+.playMultiButton:hover {
+    background-color: #094781;
+}
+
+.logoutBtn {
+    background-color: red;
+}
+
+.logoutBtn:hover {
+    background-color: #800000;
+}
+
+.submitBtn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    background-color: #08a1cfe1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submitBtn:hover {
+    background-color: #123581;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Style the label as the button */
+.colors label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid #007bff;
+    border-radius: 20px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Style when selected */
+input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+}
+
+/* Add hover effect */
+.colors label:hover {
+    background-color: #f0f8ff;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.depthContainer, .colorSideContainer {
+    margin: 20px;
+    min-width: 300px;
+    justify-content: center;
+}
+
+/* Container to style the select properly */
+.strengthContainer {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+}
+
+.strength {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #333;
+    border: 2px solid #00ff37;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23007bff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"%3E%3Cpath d="M6 9l6 6 6-6"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus and hover styles */
+.strength:focus {
+    outline: none;
+    border-color: #15b300;
+    box-shadow: 0 0 8px rgba(30, 255, 0, 0.5);
+}
+
+.strength:hover {
+    border-color: #0fb300;
+}
+
+/* Add a smoother transition for dropdown open/close */
+.strength option {
+    padding: 10px;
+    background-color: white;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.strength option:hover {
+    background-color: #f1f1f1;
+}
+  
+/* Container for proper alignment */
+.undoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+/* Hide the default checkbox */
+.undoCheck {
+    display: none;
+}
+
+/* Custom checkbox design */
+.undoCheck + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    user-select: none;
+}
+
+/* Checkbox shape */
+.undoCheck + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 4px; /* Rounded corners */
+    background-color: white;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Checkmark when checked */
+.undoCheck:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 8px;
+    height: 16px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+}
+
+/* Change background when checked */
+.undoCheck:checked + label::before {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Hover effect */
+.undoCheck + label:hover::before {
+    border-color: #0056b3;
+}
+
+@media screen and (max-width: 1085px) {
+    .homeContainer {
+        min-width: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .homeArea {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+}
