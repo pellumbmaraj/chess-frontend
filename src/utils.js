@@ -171,7 +171,7 @@ export const sendEncryptedDataToServer = async (route, data) => {
     }
 };
 
-const SOCKET_URL = "https://chess-backend-1-q77l.onrender.com/";
+const SOCKET_URL = "http://localhost:3000/";
 
 const storedSocketId = localStorage.getItem("socketId");
 
